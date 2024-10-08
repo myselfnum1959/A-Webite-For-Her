@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Video</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" id="mainContent">
+        <h1>Do you love me?</h1>
+        <div class="heart"></div>
+        <div class="buttons">
+            <button class="yes" onclick="playVideo()">Yes</button>
+            <button class="no" onclick="hideNo()">No</button>
+        </div>
+    </div>
+
+    <div id="videoContainer" style="display:none;">
+        <h1 class="i-love-too">I LOVE YOU TOO !!</h1>
+        <video id="loveVideo" width="640" height="360" controls>
+            <source src="v.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <script>
+        function hideNo() {
+            document.querySelector('.no').style.display = 'none';
+            document.querySelector('.yes').style.transform = 'scale(1.5)';
+        }
+
+        function playVideo() {
+            document.getElementById('mainContent').style.display = 'none';
+            const videoContainer = document.getElementById('videoContainer');
+            videoContainer.style.display = 'block';
+            const video = document.getElementById('loveVideo');
+            video.play();
+        }
+    </script>
+</body>
+</html>

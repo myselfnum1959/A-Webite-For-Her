@@ -1,0 +1,77 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  text-align: center;
+}
+
+.i-love-too {
+  color: red;
+}
+
+h1 {
+  margin-bottom: 50px;
+}
+
+.heart {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  transform: rotate(-45deg);
+  margin: 0 auto;
+}
+
+.heart:before,
+.heart:after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.heart:before {
+  top: -50px;
+  left: 0;
+}
+
+.heart:after {
+  left: 50px;
+  top: 0;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.yes {
+  background-color: green;
+  color: white;
+}
+
+.no {
+  background-color: red;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.9;
+}
